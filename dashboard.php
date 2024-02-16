@@ -1,12 +1,11 @@
 <?php 
 session_start();
+require 'functions.php';
 
 if( !isset($_SESSION["login"] )){
     header("Location: login.php");
     exit;
 }
-// Panggil koneksi
-require 'functions.php';
 $kompeni = query("SELECT * FROM perusahaan");
 
 // Search Feature
@@ -34,8 +33,8 @@ if( isset($_POST["cari"])) {
     <h1>List Lamaran Perusahaan</h1>
 
     <form action="" method="post">
-        <input type="text" name="keyword" size="40" autofocus placeholder="Mau Cari Apa..." autocomplete="off">
-        <button type="submit" name="cari">Search !</button>
+        <input type="text" name="keyword" id="keyword" size="40" autofocus placeholder="Mau Cari Apa..." autocomplete="off">
+        <button type="submit" name="cari" id="tombol-cari">Search !</button>
     </form>
 
     <br>
@@ -44,7 +43,7 @@ if( isset($_POST["cari"])) {
 
     <br><br>
 
-<div class="container">
+<div class="container" id="container">
     <table class="table table-striped" border="1" cellpadding="10" cellspacing="0">
         <tr>
             <th>No.</th>
@@ -91,5 +90,11 @@ if( isset($_POST["cari"])) {
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    
+    <!-- User JS -->
+    <script src="js/script.js"></script>
 </body>
 </html>
