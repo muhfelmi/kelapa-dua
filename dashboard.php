@@ -28,23 +28,25 @@ if( isset($_POST["cari"])) {
     <link rel="stylesheet" href="style/style.css">
     <title>Dashboard Pengguna</title>
 </head>
+
+    <nav class="navbar bg-info mb-3 py-3">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-medium">Dashboard</a>
+        <form class="d-flex" role="search">
+            <input class="form-control px-5" name="keyword" id="keyword" type="search" placeholder="Search" aria-label="Search">
+        </form>
+        <a class="btn btn-danger" href="logout.php">Logout</a>
+    </div>
+    </nav>
+
 <body>
-    <a href="logout.php">Logout</a>
-    <h1>List Lamaran Perusahaan</h1>
-
-    <form action="" method="post">
-        <input type="text" name="keyword" id="keyword" size="40" autofocus placeholder="Mau Cari Apa..." autocomplete="off">
-        <button type="submit" name="cari" id="tombol-cari">Search !</button>
-    </form>
-
-    <br>
-
+    <div class="container-fluid">
+        <h1>List Lamaran Perusahaan</h1>
         <a class="btn btn-primary" href="tambah.php" role="button">Tambah Data</a>
+    </div>
 
-    <br><br>
-
-<div class="container" id="container">
-    <table class="table table-striped" border="1" cellpadding="10" cellspacing="0">
+<div class="container-xxl mt-4" id="container">
+    <table class="table table-striped">
         <tr>
             <th>No.</th>
             <th>Action</th>
