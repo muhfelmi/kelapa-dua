@@ -73,10 +73,6 @@ if(isset($_POST["login"])){
 <body>
     <!-- <h1>Login</h1> -->
 
-    <?php if(isset ($error)) : ?>
-        <p style="color: red; font-style:italic;">Username / Password Salah!</p>
-    <?php endif; ?>
-
     <section class="h-100">
       <div class="container h-100">
         <div class="row justify-content-sm-center h-100">
@@ -87,7 +83,7 @@ if(isset($_POST["login"])){
             <div class="card shadow-lg">
               <div class="card-body p-5">
                 <h1 class="fs-4 card-title fw-bold mb-4">Login</h1>
-                <form action="" method="POST" class="needs-validation" novalidate="" autocomplete="off">
+                <form action="" method="POST" class="needs-validation" autocomplete="off">
                   <div class="mb-3">
                     <label class="mb-2 text-muted" for="username">Username</label>
                     <input id="username" type="text" class="form-control" name="username" value="" required autofocus />
@@ -97,7 +93,7 @@ if(isset($_POST["login"])){
                   <div class="mb-3">
                     <div class="mb-2 w-100">
                       <label class="text-muted" for="password">Password</label>
-                      <a href="forgot.html" class="float-end"> Forgot Password? </a>
+                      <!-- <a href="forgot.html" class="float-end"> Forgot Password? </a> -->
                     </div>
                     <input id="password" type="password" class="form-control" name="password" required />
                     <div class="invalid-feedback">Password is required</div>
@@ -112,8 +108,13 @@ if(isset($_POST["login"])){
                   </div>
                 </form>
               </div>
+              <?php if(isset ($error)) : ?>
+                <div class="py-2 border-0">
+                  <p class="text-center text-uppercase fw-bold text-danger">Username / Password Salah!</p>
+                </div>
+              <?php endif; ?>
               <div class="card-footer py-3 border-0">
-                <div class="text-center">Don't have an account? <a href="register.php" class="text-dark">Create One</a></div>
+                <div class="text-center">Don't have an account? <a href="register.php" class="text-primary">Create One</a></div>
               </div>
             </div>
             <div class="text-center mt-5 text-muted">Copyright &copy; 2024 &mdash; iFelz</div>

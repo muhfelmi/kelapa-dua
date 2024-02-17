@@ -81,12 +81,12 @@ if(isset($_POST["register"])){
 						</div>
 						<div class="card-footer py-3 border-0">
 							<div class="text-center">
-								Already have an account? <a href="login.php" class="text-dark">Login</a>
+								Already have an account? <a href="login.php" class="text-primary">Login</a>
 							</div>
 						</div>
 					</div>
 					<div class="text-center mt-5 text-muted">
-						Copyright &copy; 2017-2021 &mdash; Your Company 
+						Copyright &copy; 2024 &mdash; iFelz 
 					</div>
 				</div>
 			</div>
