@@ -27,7 +27,7 @@ if( isset($_POST["cari"])) {
 
     <!-- User CSS -->
     <link rel="stylesheet" href="style/style.css">
-    <title>Dashboard Pengguna</title>
+    <title>KELAPA | User Dashboard</title>
 </head>
 
     <nav class="navbar bg-info mb-3">
@@ -102,7 +102,7 @@ if( isset($_POST["cari"])) {
         
         <?php endforeach; ?>
     </table>
-    </div>
+</div>
 
     <footer class="footer fixed-bottom bg-info text-white text-center pb-1 pt-3">
     <p>Created with <i class="bi bi-heart-pulse-fill text-danger"></i> by <a href="#" class="text-white fw-bold">iFelz</a></p>
