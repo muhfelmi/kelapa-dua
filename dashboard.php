@@ -52,54 +52,65 @@ if( isset($_POST["cari"])) {
         </div>
     </div>
 
-<div class="container-xxl mt-4" id="container">
-    <table class="table table-striped">
-        <tr>
-            <th>No.</th>
-            <th>Action</th>
-            <!-- <th>Gambar</th> -->
-            <th>Alamat</th>
-            <th>Perusahaan</th>
-            <th>Posisi</th>
-            <th>Kirim Via</th>
-            <th>Info Loker</th>
-            <th>Link Loker</th>
-            <th>Keterangan</th>
-            <th>Status Apply</th>
-            <th>Tanggal Apply</th>
-            <th>Response</th>
-            <th>Alasan</th>
-        </tr>
+<div class="table-responsive-xl mt-4" id="container">
+    <table class="table table-hover text-center align-middle">
+        <thead class="table-dark align-middle">
+            <tr>
+                <th>No</th>
+                <th>Action</th>
+                <!-- <th>Gambar</th> -->
+                <th>Alamat</th>
+                <th>Perusahaan</th>
+                <th>Posisi</th>
+                <th>Kirim Via</th>
+                <th>Info Loker</th>
+                <th>Link Loker</th>
+                <th>Keterangan</th>
+                <th>Status Apply</th>
+                <th>Tanggal Apply</th>
+                <th>Response</th>
+                <th>Alasan</th>
+            </tr>
+        </thead>
 
         <?php $no = 1; ?>
         <?php foreach ($kompeni as $row) : ?>
-        <tr>
-            <td><?= $no++; ?></td> <!-- Menampilkan nomor urutan dan kemudian menambahkan variabel $no -->
-            <td>
-                <a href="ubah.php?id=<?= $row["id"]; ?>">Ubah</a> |
-                <a href="hapus.php?id=<?= $row["id"]; ?>" onclick="return confirm('Apakah yakin ingin menghapus data?')">Hapus</a>
-            </td>
-            <!-- <td>Gambar.png</td> -->
-            <td><?= $row["alamat"]; ?></td>
-            <td><?= $row["nama"]; ?></td>
-            <td><?= $row["posisi"]; ?></td>
-            <td><?= $row["kirim_via"]; ?></td>
-            <td><?= $row["info_loker"]; ?></td>
-            <td><a href="<?= $row["link_loker"]; ?>"><?= $row["link_loker"]; ?></a></td>
-            <td><?= $row["keterangan"]; ?></td>
-
-            <td><?= $row["status_apply"]; ?></td>
-            <td><?= $row["date_apply"]; ?></td>
-            <td><?= $row["response"]; ?></td>
-            <td><?= $row["alasan"]; ?></td>
-        </tr>
+        <tbody class="">
+            <tr>
+                <td class="fw-bold"><?= $no++; ?></td> <!-- Menampilkan nomor urutan dan kemudian menambahkan variabel $no -->
+                <td>
+                    <div class="container d-flex flex-column py-2">
+                        <a class="btn btn-primary" href="ubah.php?id=<?= $row["id"]; ?>">Ubah</a>
+                        <a class="btn btn-danger" href="hapus.php?id=<?= $row["id"]; ?>" onclick="return confirm('Apakah yakin ingin menghapus data?')">Hapus</a>
+                    </div>
+                </td>
+                <!-- <td>Gambar.png</td> -->
+                <td><?= $row["alamat"]; ?></td>
+                <td><?= $row["nama"]; ?></td>
+                <td><?= $row["posisi"]; ?></td>
+                <td><?= $row["kirim_via"]; ?></td>
+                <td><?= $row["info_loker"]; ?></td>
+                <td><a href="<?= $row["link_loker"]; ?>"><?= $row["link_loker"]; ?></a></td>
+                <td><?= $row["keterangan"]; ?></td>
+    
+                <td><?= $row["status_apply"]; ?></td>
+                <td><?= $row["date_apply"]; ?></td>
+                <td><?= $row["response"]; ?></td>
+                <td><?= $row["alasan"]; ?></td>
+            </tr>
+        </tbody>
+        
         <?php endforeach; ?>
     </table>
     </div>
 
+    <footer class="footer fixed-bottom bg-info text-white text-center pb-1 pt-3">
+    <p>Created with <i class="bi bi-heart-pulse-fill text-danger"></i> by <a href="#" class="text-white fw-bold">iFelz</a></p>
+    </footer>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
- 
+
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     
