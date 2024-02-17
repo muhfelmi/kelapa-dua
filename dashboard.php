@@ -23,26 +23,33 @@ if( isset($_POST["cari"])) {
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!-- User CSS -->
     <link rel="stylesheet" href="style/style.css">
     <title>Dashboard Pengguna</title>
 </head>
 
-    <nav class="navbar bg-info mb-3 py-3">
-    <div class="container-fluid">
-        <a class="navbar-brand fw-medium">Dashboard</a>
-        <form class="d-flex" role="search">
-            <input class="form-control px-5" name="keyword" id="keyword" type="search" placeholder="Search" aria-label="Search">
-        </form>
-        <a class="btn btn-danger" href="logout.php">Logout</a>
-    </div>
+    <nav class="navbar bg-info mb-3">
+        <div class="container-fluid d-flex justify-content-between">
+            <a class="navbar-brand fw-medium">Dashboard</a>
+            <form class="d-flex" role="search">
+                <input class="form-control px-5" name="keyword" id="keyword" type="search" placeholder="Search" aria-label="Search">
+            </form>
+            <a class="btn btn-danger" href="logout.php">Logout</a>
+        </div>
     </nav>
 
 <body>
-    <div class="container-fluid">
-        <h1>List Lamaran Perusahaan</h1>
-        <a class="btn btn-primary" href="tambah.php" role="button">Tambah Data</a>
+    <div class="container-fluid d-flex">
+        <div class="col text-center">
+            <div class="row pb-3">
+                <h1>List Lamaran Perusahaan</h1>
+            </div>
+            <div class="col">
+                <a class="btn btn-primary px-5" href="tambah.php" role="button">Tambah Data</a>
+            </div>
+        </div>
     </div>
 
 <div class="container-xxl mt-4" id="container">
